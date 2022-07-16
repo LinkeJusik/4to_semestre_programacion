@@ -1,0 +1,44 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass{article}            % Tipo de documento, en este caso: art'iculo
+
+\usepackage[spanish]{babel}        % algunas macros para signos de puntuaci'on en espa~nol
+\usepackage[letterpaper]{geometry} % tipo de hoja (tama~no carta)
+\usepackage{amsmath}               % \
+\usepackage{amssymb}               %  > s'imbolos, fuentes, etc. de la AMS
+\usepackage{amsfonts}              % /  (s'imbolos matem'aticos)
+\newcommand{\C}{\ensuremath{\mathbb{C}}} % C como de numeros Complejos
+\newcommand{\R}{\ensuremath{\mathbb{R}}} % R
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}} % Z
+\newcommand{\N}{\ensuremath{\mathbb{N}}} % N
+
+\author{Carlos Coronado}
+\title{Ejemplo con Varios Archivos}
+\date{\today}
+
+\begin{document}                   % inicio de documento
+
+\maketitle                         % se genera un t'itulo del documento
+
+\begin{abstract}                   % describir brevemente de que se trata 
+                                   %el documento
+
+  En este documento se muestran algunos ejemplos de los ambientes
+  \texttt{tabbing}, \texttt{table}, \texttt{figure} y
+  \texttt{verbatim}.  El contenido del documento est\'a distribuido en
+  varios archivos.
+
+\end{abstract}
+
+\section{Introducci\'on}
+
+  Se mostrar\'a algunos ambientes y comandos de \LaTeX.
+
+\input{ParteCuadros}
+\input{ParteFiguras}
+\include{ParteVerbatim}
+
+\end{document}

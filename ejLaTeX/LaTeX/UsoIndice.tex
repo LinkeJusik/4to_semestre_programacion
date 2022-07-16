@@ -1,0 +1,107 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass{article}            % Tipo de documento, en este caso: art'iculo
+
+\usepackage[spanish]{babel}        % algunas macros para signos de puntuaci'on en espa~nol
+\usepackage[letterpaper]{geometry} % tipo de hoja (tama~no carta)
+\usepackage{amsmath}               % \
+\usepackage{amssymb}               %  > s'imbolos, fuentes, etc. de la AMS
+\usepackage{amsfonts}              % /  (s'imbolos matem'aticos)
+\newcommand{\C}{\ensuremath{\mathbb{C}}} % C como de numeros Complejos
+\newcommand{\R}{\ensuremath{\mathbb{R}}} % R
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}} % Z
+\newcommand{\N}{\ensuremath{\mathbb{N}}} % N
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx}               % un paquete para incluir 'indice
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% (referencia de texto en el doc)
+\makeindex                         % importante para poder generar el 
+                                   % 'indice (mas no la tabla de contenido)
+
+\author{Carlos Coronado}
+\title{Ejemplo para Inclusi\'on de Contenido, Listados (de Tablas y Figuras) 
+e \'Indice}
+\date{\today}
+
+\begin{document}                   % inicio de documento
+
+\maketitle                         % se genera un t'itulo del documento
+
+\tableofcontents         % se genera la tabla de contenidos
+\listoffigures           % se genera la lista de figuras (ambiente figure)
+\listoftables            % se genera la lista de tablas (ambiente table)
+
+\begin{abstract}                   % describir brevemente de que se trata 
+                                   %el documento
+
+  En este documento se muestra un ejemplo para incluir listado de
+  tablas, figuras y contenido, as\'{\i} como un \'{\i}ndice.
+
+\end{abstract}
+
+\section{Introducci\'on}
+
+  Para incluir el contenido de un documento \LaTeX, en cuanto a las
+  secciones, subsecciones, etc., se refiere, se utiliza el comando
+  \verb|\tableofcontents|.  Para enlistar las tablas y/o figuras
+  contenidas en el documento se utiliza el comando
+  \verb|\listoftables| y \verb|\listoffigures|, respectivamente.
+
+\section{Figuras y Tablas}
+
+  Las figuras\index{figura} y tablas\index{tabla} hacen referencia al
+  ambiente \texttt{figure} y \texttt{table}, respectivamente.
+
+\subsection{Figuras}
+
+  Una figura se puede incluir con el ambiente \texttt{figure}.
+
+  \begin{figure}
+
+   Aqu\'{\i} deber\'{\i}a ir una figura.
+
+  \caption{Ejemplo del ambiente \texttt{figure}}\label{fig:ejemplo}
+
+
+  \end{figure}
+
+  En la figura \ref{fig:ejemplo}\index{figura!ejemplo} se muestra un
+  ejemplo del uso del ambiente \texttt{figure}.
+
+\subsection{Tablas}
+
+  Una tabla\index{tabla} se puede incluir con el ambiente \texttt{table}.
+
+  \begin{table}
+
+   Aqu\'{\i} deber\'{\i}a ir una tabla.
+
+  \caption{Ejemplo del ambiente \texttt{table}}\label{tab:ejemplo}
+
+  \end{table}
+
+  En la tabla \ref{tab:ejemplo}\index{tabla!ejemplo} se muestra un
+  ejemplo del uso del ambiente \texttt{table}.
+
+\section{Final}
+
+  Mera secci\'on de relleno\index{relleno} para el uso de la tabla de
+  contenidos.
+
+
+  \index{ejemplos|see{figura}}
+  \index{ejemplos|see{tabla}}
+
+  \printindex
+
+%%%%
+%%%% IMPORTANTE:
+%%%%    Al compilar el documento LaTeX, se debe ejecutar el comando
+%%%% makeindex (ESTO LO DEBER'IA HACER EL ENTORNO DE DESARROLLO) para
+%%%% poder generar el 'indice.
+%%%%
+
+\end{document}

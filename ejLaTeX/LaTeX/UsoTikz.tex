@@ -1,0 +1,78 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass{article}            % Tipo de documento, en este caso: art'iculo
+
+\usepackage[spanish]{babel}        % algunas macros para signos de puntuaci'on en espa~nol
+\usepackage[letterpaper]{geometry} % tipo de hoja (tama~no carta)
+\usepackage{amsmath}               % \
+\usepackage{amssymb}               %  > s'imbolos, fuentes, etc. de la AMS
+\usepackage{amsfonts}              % /  (s'imbolos matem'aticos)
+\newcommand{\C}{\ensuremath{\mathbb{C}}} % C como de numeros Complejos
+\newcommand{\R}{\ensuremath{\mathbb{R}}} % R
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}} % Z
+\newcommand{\N}{\ensuremath{\mathbb{N}}} % N
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgf}                   % OTRO modo de incluir im'agenes
+\usepackage{tikz}                  % junto con una utiler'ia
+\usepgflibrary{shapes}             % junto con una utiler'ia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% En este caso se tiene que declarar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% la imagen a utilizar como se muestra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% a continuaci'on.
+
+\pgfdeclareimage{miLogoESFM}{esfm}
+\pgfdeclareimage[width=2cm]{miLogoIPN}{ipn}
+
+
+\author{Carlos Coronado}
+\title{Ejemplo para Inclusi\'on de Archivos de Im\'agenes}
+\date{\today}
+
+\begin{document}                   % inicio de documento
+
+\maketitle                         % se genera un t'itulo del documento
+
+\begin{abstract}                   % describir brevemente de que se trata 
+                                   %el documento
+
+  En este documento se muestra un ejemplo para incluir archivos con
+  im\'agenes.
+
+\end{abstract}
+
+
+  Con el comando
+  \verb|\pgfdeclareimage[|\textit{par\'ametros}\verb|]{|\textit{identificador}\verb|}|\verb|{|\textit{archivo}\verb|}|
+  se declara la imagen a utilizar y se le asigna un identificador,
+  mientras que con el comando
+  \verb|\pgfuseimage{|\textit{identificador}\verb|}| se puede incluir
+  una imagen como \pgfuseimage{miLogoESFM}, o como
+
+  \begin{center}
+  \pgfuseimage{miLogoIPN}
+  \end{center}
+
+  Tambi\'en se puede usar el entorno \texttt{figure}
+
+\begin{figure}
+  \begin{center}
+    \pgfuseimage{miLogoESFM}
+
+    \caption{Figura de un archivo en formato png, otros tambi\'en
+    aceptados son: jpg y pdf}\label{miFIG}
+
+  \end{center}
+\end{figure}
+
+En la figura \ref{miFIG} se muestra un ejemplo del entorno
+\texttt{figure}.
+
+
+Una ventaja enorme al utilizar el paquete \texttt{pgf} es el uso de,
+por ejemplo: \tikz{ \node[draw, cross out, line width=3pt,
+scale=0.5]{\pgfuseimage{miLogoESFM}};}, entre otras moner\'{\i}as.
+
+\end{document}

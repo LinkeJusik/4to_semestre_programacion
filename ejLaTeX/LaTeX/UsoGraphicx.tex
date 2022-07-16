@@ -1,0 +1,65 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+% 
+
+\documentclass{article}            % Tipo de documento, en este caso: art'iculo
+
+\usepackage[spanish]{babel}        % algunas macros para signos de puntuaci'on en espa~nol
+\usepackage[letterpaper]{geometry} % tipo de hoja
+\usepackage{amsmath}               % \
+\usepackage{amssymb}               %  > s'imbolos, fuentes, etc. de la AMS
+\usepackage{amsfonts}              % /  (s'imbolos matem'aticos)
+\newcommand{\C}{\ensuremath{\mathbb{C}}} % C como de numeros Complejos
+\newcommand{\R}{\ensuremath{\mathbb{R}}} % R
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}} % Z
+\newcommand{\N}{\ensuremath{\mathbb{N}}} % N
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}              % un modo de incluir im'agenes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\author{Carlos Coronado}
+\title{Ejemplo para Inclusi\'on de Archivos de Im\'agenes}
+\date{\today}
+
+\begin{document}                   % inicio de documento
+
+\maketitle                         % se genera un t'itulo del documento
+
+\begin{abstract}                   % describir brevemente de que se trata 
+                                   %el documento
+
+  En este documento se muestra un ejemplo para incluir archivos con
+  im\'agenes.
+
+\end{abstract}
+
+
+  Con el comando
+  \verb|\includegraphics[|\textit{par\'ametros}\verb|]{|\textit{archivo}\verb|}|
+  se puede incluir una imagen como \includegraphics[scale=0.5]{esfm}, 
+  o como
+
+  \begin{center}
+  \includegraphics[scale=0.5]{ipn}
+  \end{center}
+
+  Tambi\'en se puede usar el entorno \texttt{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics{esfm} 
+
+    \caption{Figura de un archivo en formato png, otros tambi\'en
+    aceptados son: jpg y pdf}\label{miFIG}
+
+  \end{center}
+\end{figure}
+
+En la figura \ref{miFIG} se muestra un ejemplo del entorno
+\texttt{figure}.
+
+
+\end{document}

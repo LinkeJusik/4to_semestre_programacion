@@ -1,0 +1,51 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass{article}            % Tipo de documento, en este caso: art'iculo
+
+\usepackage{hyperref}
+
+\usepackage[spanish]{babel}        % algunas macros para signos de puntuaci'on en espa~nol
+\usepackage[letterpaper]{geometry} % tipo de hoja (tama~no carta)
+\usepackage{amsmath}               % \
+\usepackage{amssymb}               %  > s'imbolos, fuentes, etc. de la AMS
+\usepackage{amsfonts}              % /  (s'imbolos matem'aticos)
+\newcommand{\C}{\ensuremath{\mathbb{C}}} % C como de numeros Complejos
+\newcommand{\R}{\ensuremath{\mathbb{R}}} % R
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}} % Z
+\newcommand{\N}{\ensuremath{\mathbb{N}}} % N
+
+
+\author{Carlos Coronado}
+\title{Ejemplo para Inclusi\'on de Bibliograf\'{\i}a}
+\date{\today}
+
+\begin{document}                   % inicio de documento
+
+\maketitle                         % se genera un t'itulo del documento
+
+\begin{abstract}                   % describir brevemente de que se trata 
+                                   %el documento
+
+  En este documento se muestra un ejemplo para incluir
+  bibliograf\'{\i}a en un documento \LaTeX.
+
+\end{abstract}
+
+En el libro de Knuth \cite{knuth} se muestran diversos algoritmos
+computacionales.  En el reporte t\'ecnico \cite{zimmermann} se muestra
+un m\'etodo para la multiplicaci\'on de n\'umeros enteros de longitud
+``grande''.  En el art\'{\i}culo \cite{rsa}, los autores presentan un
+esquema criptogr\'afico de clave p\'ublica para el uso de firmas digitales.
+ 
+En la bibliograf\'{\i}a puede aparecer uno o m\'as elementos
+bibliogr\'aficos que no se hayan citado expl\'{\i}citamente, como puede verse en este ejemplo al utilizar \verb|\nocite{bm}|, como ejemplo.
+
+ \nocite{bm,hashmd5}
+
+\bibliography{miBiblio} \bibliographystyle{alpha}
+
+
+\end{document}

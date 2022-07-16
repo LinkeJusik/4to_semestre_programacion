@@ -1,0 +1,187 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass{beamer}  % Tipo de documento, en este caso: presentaci'on
+
+\mode<presentation>
+{
+  \usetheme{% Tema de la presentaci'on (colores, formas, etc.)
+    %AnnArbor%
+    %Antibes%
+    %Bergen%
+    %Berkeley%
+    %Berlin%
+    %Boadilla%
+    %boxes%
+    %CambridgeUS%
+    %Copenhagen%
+    Darmstadt%
+    %default%
+    %Dresden%
+    %Frankfurt%
+    %Goettingen%
+    %Hannover%
+    %Ilmenau%
+    %JuanLesPins%
+    %Luebeck%
+    %Madrid%
+    %Malmoe%
+    %Marburg%
+    %Montpellier%
+    %PaloAlto%
+    %Pittsburgh%
+    %Rochester%
+    %Singapore%
+    %Szeged%
+    %Warsaw%
+  }
+
+  \setbeamercovered{transparent} % Opcional para la aparicion gradual
+  \usecolortheme[rgb={0.32,0.67,0.39}]{structure} % colores con intensidad
+  %\usecolortheme[rgb={0.55,0,0.15}]{structure} % colores con intensidad
+                                               % del rojo, verde y azul
+                                               % valores entre 0 y 1
+                                               % pruebe: 0, 0, 1
+                                               % pruebe: 0, 1, 0
+                                               % pruebe: 1, 0, 0
+                                               % pruebe: 0.32, 0.67, 0.39
+}
+
+
+\usepackage[english]{babel} % el paquete spanish puede tener ciertos conflictos
+
+
+
+\title{T\'{\i}tulo de la Presentaci\'on}
+
+\subtitle{Subt\'{\i}tulo de la Presentaci\'on} % (optional)
+
+\author[Coronado] % (optional. Nombre ``corto'')
+{Carlos Coronado}
+
+\institute[ESFM] % (optional. Nombre ``corto'')
+{
+  Escuela Superior de F\'{\i}sica y Matem\'aticas\\
+  Instituto Polit\'ecnico Nacional}
+
+\date[dd/mm/aa] % (optional)
+{d\'{\i}a de mes de a\~no}
+
+
+% para que se vea el contenido al paso de cada secci#on
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Contenido}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+%%%% definici'on de algunos ambientes
+
+\newtheorem{miTeo}{Teorema}
+\newtheorem{miDef}{Definici\'on}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contenido}
+  \tableofcontents
+\end{frame}
+
+
+\section{Introducci\'on}
+
+\subsection[1$^{\mbox{\tiny ra}}$ subsecci\'on]{Nombre de la Primera Subsecci\'on}
+
+\begin{frame}
+  \frametitle{T\'{\i}tulos Informativos. Uso de May\'usculas.}
+  \framesubtitle{Subt\'{\i}tulos Optionales.}
+
+  \begin{itemize}[<+->] % para que parezcan uno a uno
+  \item Use mucho \texttt{itemize}.
+  \item Use sentencias o frases muy breves.
+  \end{itemize}
+
+\end{frame}
+
+\subsection[2$^{\mbox{\tiny da}}$ subsecci\'on]{Nombre de la Segunda Subsecci\'on}
+
+\begin{frame}
+  \frametitle{T\'{\i}tulos Informativos.}
+
+  Se pueden crear capas sobrepuestas\dots
+  \begin{itemize}
+  \item usando el comando \texttt{pause}:
+    \begin{itemize}
+    \item Primer item.  \pause
+    \item Segundo item.
+    \end{itemize}
+  \item usando especificaciones sobrepuestas:
+    \begin{itemize}
+    \item<3-> Primer item.
+    \item<4-> Segundo item.
+    \end{itemize}
+  \item usando el comando general \texttt{uncover}:
+    \begin{itemize}
+      \uncover<5->{\item Primer item.}
+      \uncover<6->{\item Segundo item.}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Segunda Secci\'on}
+
+\begin{frame}
+  \frametitle{T\'{\i}tulos Informativos.}
+
+  \begin{miTeo}[Fundamental de la Aritm\'etica]
+
+    Todo n\'umero entero se puede factorizar como producto de primos.
+    La factorizaci\'on es \'unica salvo orden y unidades.
+
+  \end{miTeo}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{T\'{\i}tulos Informativos.}
+
+  \begin{miDef}
+    Sea $\{a_n\}_{n=1}^\infty$ una sucesi\'on, decimos que $l$ es el
+    l\'{\i}mite de $\{a_n\}_{n=1}^\infty$ si $\forall\ \epsilon>0
+    \quad \exists n_0 \geq 1$ tal que $|a_n - l| < \epsilon \quad
+    \forall n\geq n_0$.
+
+  \end{miDef}
+
+\end{frame}
+
+
+\section*{Resumen}
+
+\begin{frame}
+  \frametitle{Resumen}
+
+  % Mantenga el resumen muy ``breve''.
+  \begin{itemize}
+  \item El \alert{primer mensaje principal} de la pl\'atica en una o
+    dos l\'{\i}neas.
+  \item El \alert{segundo mensaje principal} de la pl\'atica en una o
+    dos l\'{\i}neas.
+  \item Quiz\'a un \alert{Tercer mensaje}, pero no m\'as que eso.
+  \end{itemize}
+  
+\end{frame}
+
+
+\end{document}
+
+

@@ -1,0 +1,117 @@
+%
+% Carlos Coronado
+% Materia: Programaci'on II
+%
+
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+
+\author{Nombre Alumno(a)}
+\date{\today}
+\title{T\'{\i}tulo de la Tarea o Trabajo}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+  Breve descripci\'on de lo abarcado en la tarea o el trabajo.
+
+\end{abstract}
+
+\section{Nombre de una secci\'on}
+
+Informaci\'on sobre la secci\'on.
+
+\subsection{Nombre de una subsecci\'on}
+
+Posible subsecci\'on o tema a tratar dentro de la presente secci\'on.
+
+\subsection{Signos de puntuaci\'on}
+
+Acentos: \'a, \'e, \'{\i}, \'o, \'u.
+
+\~n y otros signos ?`, !` se producen con:
+
+\begin{verbatim}
+Acentos: \'a, \'e, \'{\i}, \'o, \'u.
+
+\~n y otros signos ?`, !` se producen con:
+\end{verbatim}
+
+\section{Otra secci\'on}
+
+Informacion sobre esta otra secci\'on.
+
+\section{Ambiente Matem\'atico}
+
+Es esta secci\'on se describe muy brevemente el ambiente o modo
+matem\'atico.
+
+Para escribir f\'ormulas dentro de un texto se debe utilizar comandos
+matem\'aticos dentro de \$ \$. Por ejemplo $\frac{\int_0^\infty
+  e^{-x^2}dx}{\pi}$.
+
+Para escribir una f\'ormula matem\'atica, tambi\'en se puede utilizar
+dobles signos de pesos (\$\$) al inicio y final de la f\'ormula, lo la
+centra. Por ejemplo la misma expresi\'on da como resultado
+$$\frac{\int_0^\infty e^{-x^2}dx}{\pi}$$
+
+\section{Tablas}
+
+En \LaTeX\ se pueden utilizar tablas como por ejemplo:
+
+\begin{center}
+
+\begin{tabular}{lcr}
+
+casilla izq & casilla central & casilla der \\
+otra & otra & otra \\
+una m\'as & una m\'as & una m\'as 
+
+\end{tabular}
+
+\end{center}
+
+o como:
+
+\begin{center}
+
+\begin{tabular}{||l|c|r||}
+
+\hline
+casilla izq & casilla central & casilla der \\ \hline
+otra & otra & otra \\ \hline
+una m\'as & una m\'as & una m\'as \\ \hline
+
+\end{tabular}
+
+\end{center}
+
+La tabla tambien se puede poner dentro de una ``lista de cuadros''
+como por ejemplo:
+
+\begin{table}
+
+\begin{tabular}{||l|c|r||}
+
+\hline
+casilla izq & casilla central & casilla der \\ \hline
+otra & otra & otra \\ \hline
+una m\'as & una m\'as & una m\'as \\ \hline
+
+\end{tabular}
+
+\caption{Ejemplo de una Tabla}\label{miTabla}
+
+\end{table}
+
+En la tabla \ref{miTabla} se muestra un ejemplo de informaci\'on en
+\emph{recuadros}.
+
+
+
+\end{document}
