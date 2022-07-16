@@ -1,0 +1,223 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{Mart\'{\i}nez Gonz\'alez, Gabriel}
+\date{\today}
+\title{Tarea 2: Notas Prog II}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+	Genere un documento que tenga dos secciones, una de nombre Lenguaje C y otra de nombre Lenguaje Java. En cada una de las secciones, genere cuatro subsescciones de nombre Palabras reservadas, Tipos de datos b\'asicos o Primitivos, Operadores y Entrada y salida est\'andar. En la subsecci\'on de tipos de datos, genere las subsubsecciones que correspondan a cada uno de los grupos de tipos, como por ejemplo n\'umeros enteros y n\'umeros de punto flotante, en la de operadores, genere las subsubsecciones que correspondan a los tipos de operadores, como por ejemplo aritm\'eticos, l\'ogicos, etc.
+
+\end{abstract}
+
+\section{Lenguaje C}
+
+\subsection{Palabras reservadas}
+
+En el lenguaje C exiten cerca de 40 palabras reservadas, las cuales son:
+
+\begin{center}
+\begin{tabular}{lcccccr}
+
+auto & {break} & case & char & const & continue & default \\
+do & double & else & enum & extern & float & for \\
+goto & if & int & long & register & return & short \\
+signed & sizeof & static & struct & typedef & union & unsigned \\
+void & volatile & while &  &  &  &  \\
+
+\end{tabular}
+\end{center}
+
+\subsection{Tipos de datos b\'asicos o primitivos}
+
+En el lenguaje C existen, de primeras, 6 tipos de datos:
+
+\subsubsection{Car\'acteres}
+
+Se denotan con la palabra reservada \textit{char}. Poseen un tama\~no de un byte (8 bits) y puede ser modificado mendiante modificadores de signo (signed y unsigned).
+
+\subsubsection{N\'umeros enteros}
+
+Se denotan por la palabra reservada \textit{int}. Poseen un tama\~no de 4 bytes y pueden ser modificados por modificadores de tamaño (long o short) o por modificadores de signo (signed o unsigned). 
+
+\subsubsection{N\'umeros de punto flotante}
+
+Se denotan por la palabra reservada \textit{float}. Posee un tama\~no de 4 bytes.
+
+\subsubsection{N\'umero de punto flotante de doble precisi\'on}
+
+Se denotan por la palabra reservada \textit{double}. Poseen un tama\~no de 8 bytes y pueden ser modificador por el modificador \textit{long}.
+
+\subsubsection{Nulo o vacio}
+
+Se denota por la palabra reservada \textit{void} y no debe ocupar espacio en memoria.
+
+\subsubsection{Apuntadores}
+
+Se denota por el simbolo \textit{\&} y ocupa un espacio en memoria de 4 bytes.
+
+\subsection{Operadores}
+
+\subsubsection{Aritm\'eticos}
+
+\begin{itemize}
+\item + (suma)
+\item - (resta)
+\item * (producto)
+\item / (divisi\'on)
+\item \% (m\'odulo)
+\end{itemize}
+
+\subsubsection{Relacionales}
+
+\begin{itemize}
+\item < (menor que)
+\item > (mayor que)
+\item <= (menor o igual que)
+\item >= (mayor o igual que)
+\item == (igual a)
+\item \!= (diferente de)
+\end{itemize}
+
+\subsubsection{L\'ogicos}
+\begin{itemize}
+\item \&\& (and)
+\item || (or)
+\end{itemize}
+
+\subsubsection{Bit a bit}
+\begin{itemize}
+\item \& (and)
+\item | (or)
+\item \! (no)
+\end{itemize}
+
+\subsubsection{Asignaci\'on}
+\begin{itemize}
+\item +=
+\item -=
+\item =
+\item *=
+\item /=
+\item \%=
+\end{itemize}
+
+\subsection{Entrada y salida est\'andar}
+
+Se pueden considerar como entrada y salida est\'andar aquellas que ofrece la biblioteca stdio.h; es decir, utilizando las funciones \textit{scanf} y \textit{printf}.
+
+\section{Lenguaje Java}
+
+\subsection{Palabras reservadas}
+
+\begin{center}
+\begin{tabular}{lcccr}
+
+abstract & continue & for & new & switch \\
+assert & default & goro & package & synchronized \\
+boolean & do & if & private & this \\
+break & double & implements & protected & throw \\
+byte & else & import & public & throws \\
+case & enum & instanceof & return & transient \\
+catch & extends & int & short & try \\
+char & final & interface & static & void \\
+class & finally & long & strictfp & volatile \\
+const & float & native & super & while \\
+
+\end{tabular}
+\end{center}
+
+\subsection{Tipos de datos b\'asicos o primitivos}
+
+\subsubsection{Booleanos}
+
+Denotados por la palabra \textit{boolean}, ocupan un tama\~no de un bit y se utilizan para denotar la verdad o falsedad de alguna sentencia.
+
+\subsubsection{Car\'acteres}
+Denotando por la palabra \textit{char}, ocupa un tama\~no en memoria de 2 bytes.
+
+\subsubsection{N\'umeros enteros}
+Denotados por la palabra \textit{int}, ocupan un tama\~no en memoria de 4 bytes; sin embargo, este puede modificarse, o bien definiendo el entero como \textit{byte} (entero de 8 bits); o bien con los modificadores de tamaño \textit{short} o \textit{long}.
+
+\subsubsection{N\'umeros con punto flotante}
+Denotados por la palabra \textit{float}, ocupan un tama\~no en memoria de 4 bytes.
+
+\subsubsection{N\'umeros con punto flotante de doble precisi\'on}
+Denotados por la palabra \textit{double}, ocupan un tama\~no en memoria de 8 bytes.
+
+\subsection{Operadores}
+
+\subsubsection{Aritm\'eticos}
+
+\begin{itemize}
+\item + (suma)
+\item - (resta)
+\item * (producto)
+\item / (divisi\'on)
+\item \% (m\'odulo)
+\end{itemize}
+
+\subsubsection{Relacionales}
+
+\begin{itemize}
+\item < (menor que)
+\item > (mayor que)
+\item <= (menor o igual que)
+\item >= (mayor o igual que)
+\item == (igual a)
+\item \!= (diferente de)
+\end{itemize}
+
+\subsubsection{L\'ogicos}
+\begin{itemize}
+\item \&\& (and)
+\item || (or)
+\end{itemize}
+
+\subsubsection{Concatenaci\'on}
+\itemize{+}
+
+\subsubsection{Bit a bit}
+
+\begin{itemize}
+\item \& (and)
+\item | (or)
+\item \<\< (desplazamiento a la izquierda de los bits del operando)
+\item \>\> (desplazamiento a la derecha de los bits del operando)
+\item \! (no)
+\end{itemize}
+
+\subsubsection{Asignaci\'on}
+
+\begin{itemize}
+\item +=
+\item -=
+\item =
+\item *=
+\item /=
+\item \%=
+\end{itemize}
+
+\subsection{Entrada y salida est\'andar}
+Java tiene acceso a la entrada y salida estandar a trav\'es de la clase \textit{System}. En concreto, atravez de los ficheros:
+\begin{itemize}
+\item Stdin: \textit{System.in} implementa stdin como una instancia de la clase Input Stream. Con \textit{System.in} se accede a los m\'etodos \textit{read()} y \textit{skip()}. En concreto, \textit{System.in.read()} es la instancia más utilizada para leer datos de entrada de cualquier tipo.
+\item Stdout: \textit{System.out} implementa stdout como una instancia de la clase PrintStream. Se pueden utilizar los m\'etodos \textit{print()} y \textit{println()} con cualquier tipo de dato b\'asico de Java como argumento.
+\end{itemize}
+
+\nocite{*}
+\bibliography{biblio} \bibliographystyle{alpha}
+
+\end{document}

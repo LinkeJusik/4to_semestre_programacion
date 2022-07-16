@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{Mart\'{i}nez Gonz\'alez, Gabriel}
+\date{today}
+\title{Documentos de LATEX}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+	De acuerdo a la lista de ejercicios otorgada, para los ejercicios del 1 al 11 no se auxilie de ninugna herramienta de c\'alculo, m\'as que de usted mismo. La entrega debe realizarse en un archivo PDF generado del c\'odigo \LATEX\. El archivo debe tener nombre ejvarios.pdf. Los ejercicios obligatorios son 1, 3 y 11. La fecha límite de entrega es el 21 de febrero de 2022.
+
+\end{abstract}
+
+\section{Transformaciones de bases}
+
+Complete la siguieente tabla. Al inicuio de cada columna se indica la base en que debe estar el \'umero de la celda correspondiente. En cada rengl\'on se tiene el mismo n\'umero, pero representado en distintas bases.
+
+\begin{center}
+\begin{tabular}{||l|c|c|c|r||}
+
+\hline
+base 2 & base 4 & base 8 & base 10 & base 16 \\ \hline
+110010000001 & 302001 & 6201 & 3201 & C81 \\ \hline
+11101001010 & 131022 & 3512 & 1866 & 74A \\ \hline
+100101010110 & 211112 & 4526 & 2390 & 956 \\ \hline
+11001111001 & 121321 & 3171 & 1657 & 679 \\ \hline
+100111010010 & 213102 & 4722 & 2514 & 9D2 \\ \hline
+11010111000 & 122320 & 3270 & 1720 & 6B8 \\ \hline
+101111111000 & 233320 & 5770 & 3064 & BF8 \\ \hline
+11001000001 & 121001 & 3101 & 1601 & 641 \\ \hline
+101011011000 & 223120 & 5330 & 2776 & AD8 \\ \hline
+10011011001 & 103121 & 2331 & 1241 & 4D9 \\ \hline
+110010100 & 12110 & 624 & 404 & 194 \\ \hline
+110011001010 & 303022 & 6312 & 3274 & CCA \\ \hline
+1111010000 & 33100 & 1720 & 976 & 3D0 \\ \hline
+11 10 11 10 11 10 & 32 32 32 & 7356 & 3822 & EEE \\ \hline
+101001100101 & 221211 & 5145 & 2661 & A65 \\ \hline
+10100001001 & 110021 & 2411 & 1289 & 509 \\ \hline
+100001010101 & 201111 & 4125 & 2133 & 855 \\ \hline
+111001011011 & 321123 & 7133 & 3675 & E5B \\ \hline
+110000000100 & 300010 & 6004 & 3076 & C04 \\ \hline
+111011100100 & 323210 & 7344 & 3812 & EE4 \\ \hline
+110101100000 & 311200 & 6540 & 3424 & D60 \\ \hline
+1100101001 & 30221 & 1451 & 809 & 329 \\ \hline
+11010011111 & 122133 & 3237 & 1695 & 69F \\ \hline
+10010100101 & 102211 & 2245 & 1189 & 4A5 \\ \hline
+110000000 & 12000 & 600 & 384 & 180 \\ \hline
+10101100000 & 111200 & 2540 & 1376 & 560 \\ \hline
+101001110111 & 221313 & 5167 & 2679 & A77 \\ \hline
+10001110 & 2032 & 216 & 142 & 8E \\ \hline
+101001110101 & 221311 & 5165 & 2677 & A75 \\ \hline
+101111000010 & 233002 & 5702 & 3010 & BC2 \\ \hline
+110111010 & 12322 & 672 & 442 & 1BA \\ \hline
+100001011110 & 201132 & 4136 & 2142 & 85E \\ \hline
+10011101011 & 103223 & 2353 & 1259 & 4EB \\ \hline
+100101001110 & 211032 & 4516 & 2382 & 94E \\ \hline
+1100100 & 1210 & 144 & 100 & 64 \\ \hline
+11110110 & 3312 & 365 & 246 & F6 \\ \hline
+10111001111 & 113033 & 2717 & 1487 & 5CF \\ \hline
+101101101000 & 231220 & 5550 & 2920 & B68 \\ \hline
+11111110101 & 133311 & 3765 & 2037 & 7F5 \\ \hline
+101111101110 & 233232 & 5756 & 3054 & BEE \\ \hline
+111111011101 & 333131 & 7735 & 4061 & FDD \\ \hline
+110100010000 & 310100 & 6420 & 3344 & D10 \\ \hline
+11010110101 & 122311 & 3265 & 1717 & 6B5 \\ \hline
+10101111101 & 111331 & 2575 & 1405 & 57D \\ \hline
+10011101101 & 103231 & 2355 & 1261 & 4ED \\ \hline
+10000011000 & 100120 & 2030 & 1048 & 418 \\ \hline
+110100110000 & 310300 & 6460 & 3376 & D30 \\ \hline
+1010010000 & 22100 & 1220 & 656 & 290 \\ \hline
+10100101101 & 110231 & 2455 & 1325 & 52D \\ \hline
+11110011010 & 132122 & 3632 & 1946 & 79A \\ \hline
+100111110101 & 213311 & 4765 & 2549 & 9F5 \\ \hline
+111001111101 & 321331 & 7175 & 3709 & E7D \\ \hline
+1110100100 & 32210 & 1644 & 932 & 3A4 \\ \hline
+11111010100 & 133110 & 3724 & 2004 & 7D4 \\ \hline
+110001000100 & 301010 & 6104 & 3140 & C44 \\ \hline
+11110001111 & 132033 & 3617 & 1935 & 78F \\ \hline
+110111101110 & 313232 & 6756 & 3566 & DEE \\ \hline
+10000111100 & 100330 & 2074 & 1084 & 43C \\ \hline
+110000110010 & 300302 & 6062 & 3122 & C32 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\section{Evaluación de expresiones}
+
+Eval\'ue las siguientes expresiones e indique algún comentario en caso de haber una incosistencia o particularidad del lenguake de programaci\'on en C o en Java. Utilizamos vardouble para indicar una variable de tipo b\'asico o primitivo double y varint para indicar una variable de tipo b\'asico o primitivo int.
+
+\item ( ( ( ( \~ -4 ) || ( -3 == -1 ) ) ) ? ( ( ( ! -1 ) != ( vardouble = 4 ) ) ) : ( ( ( ! 2 ) \&\& (-2 >= 4 ) ) ) \&\& ( ( ( 2 \!= 1 ) ∗ ( varint \&= 3 ) ) << ( ( \~ 1 ) − ( \~ -4 ) ) ) ) \longrightarrow true
+\item ( -5 ∗ -2 )\longrightarrow -10 = true
+\item ( ( ( ! -3.47 ) > ( \~ 1 ) ) < ( ( 1 >> 3 ) \& ( \~ 1 ) ) ) \longrightarrow false
+\item ( ( ( - ( ! -1 ) ) == ( + ( \~ -4 ) ) ) \& ( ( ( ! -3.47 ) ) ? (( 1 \& 3 ) ) : (( ! 2 ) ) || ( ( ! -1.88 ) == ( \~ 1 ) ) ) ) \longrightarrow false
+\item ( -5 \& -3 ) \longrightarrow true
+\item ( ( ! -1.88 ) \& ( ~ -4 ) ) \longrightarrow false
+\item ( ( \~ ( -5 | -4 ) ) || ( ( 4 - -1 ) / ( ! 4 ) ) ) \longrightarrow false Nota: esta expresi\'on depende de algunas excepciones. Sin embargo, en general sería falsa.
+\item ( 4 \% 2 ) \longrightarrow 0 = false
+\item ( ( ! -1 ) + ( \~ -4 ) ) \longrightarrow true
+\item ( ( 4 - -1 ) > ( 2 + 1.93 ) ) \longrightarrow true
+\item ( - ( 4 | -3 ) ) \longrightarrow true
+\item ( - ( ( ( ! -1.88 ) * ( \~ -4 ) ) >> ( ( -2 \% -5 ) >= ( varint \&= -5 ) ) ) ) \longrightarrow false
+\item ( ( ( \~ -4 ) \& ( \~ 1 ) ) - ( ( -1 + -4 ) >= ( 0.57 == -4 ) ) )\longrightarrow true
+\item ( ( ! -1 ) << ( 2 \&\& 1 ) )\longrightarrow false
+\item ( ( ( ! ( ! 4 ) ) \% ( ( ! -1.88 ) != ( \~ 1 ) ) ) * ( ( ( ! 2 ) \& ( \~ -4 ) ) + ( + ( -5 \& 3.06 ) )) )\longrightarrow acci\'on invalida. No se puede usar un operador binario en una evaluación entre números enteros. La sintaxis correcta es ( ( ( ! ( ! 4 ) ) \% ( ( ! -1.88 ) != ( \~ 1 ) ) ) * ( ( ( ! 2 ) \& ( \~ -4 ) ) + ( + ( -5 \&\& 3.06 ) )) )\longrightarrow acci\'on invalida
+\item ( ( vardouble = -3 ) \& ( -1 + -4 ) )\longrightarrow acci\'on invalida. No se puede usar un operador binario en una evaluación entre números enteros. La sintaxis correcta es ( ( vardouble = -3 ) \&\& ( -1 + -4 ) ) \longrightarrow true
+\item ( \~ ( ( ( -1.46 \&\& 0 ) != ( ! -1.88 ) )\^( ( ! -1.88 ) != ( ! -1.88 ) ) ) )\longrightarrow true
+\item ( 4 >= -1 )\longrightarrow true
+\item ( + ( ( ( -1 + -4 ) * ( 4 \% 2 ) ) / ( - ( -2 * 1 ) ) ) )\longrightarrow false
+\item ( ( ( ! -1.88 ) / ( \~ -4 ) ) \<\< ( ( ! 2 ) <= ( \~ 1 ) ) )\longrightarrow false
+\item ( ( ( ( 1 \&\& -2 ) << ( \~ -4 ) )\^( ( -5 \% 0 ) \% ( \~ 1 ) ) ) != ( ( ( -1 == -2 ) & ( vardouble /= 0 ) ) \& ( \~ ( 2 ∗ 4 ) ) ) )\longrightarrow acci\'on invalida. Nota: hay un error de sintaxis, pues es un determinado punto se \& en lugar de \&\&; pero, adem\'as, hay una divisi\'on entre 0.
+\item ( ( ( ! -1.88 ) > ( vardouble /= -4 ) ) \>\> ( ! ( -3 == -1 ) ) )\longrightarrow false
+\item ( ( \~ -4 ) | ( \~\  -4 ) )\longrightarrow true
+\item ( ! 4 )\longrightarrow false
+\item ( ( + ( ( 0 || 2 ) \% ( \~ -4 ) ) ) | ( ( ( \~ 1 ) == ( -1.46 \&\& 0 ) ) ) ? ( ( ( -5 \&\& -2.65 ) ) ? (( ! -1 ) ) : (( \~ -4 ) ) ) : ( ( ( ! 2 ) ) ? (( ! 4 ) ) : (( \~ -4 ) ) ) )\longrightarrow false
+\item ( ( 0 \<\< -2.49 ) ) ? (( -2 \&\& 3.35 ) ) : (( -2 \&\& 3.35 ) )\longrightarrow false$ Nuevamente, hay una acción invalida al querer operar de forma binaria con n\'umeros enteros y flotantes.
+\item ( -2 * 0 )\longrightarrow 0=false
+\item ( ( ( ( -3 << -5 ) \<\< ( vardouble / = 0 ) ) \& ( ( 4 \% 2 ) == ( ! -1 ) ) ) < ( ( ( -5 \& 3.06 ) >= ( -5 ! = 3.01 ) ) >= ( ( -2.86 + 4 ) ! = ( vardouble = 4 ) ) ) )\longrightarrow acci\'on invalida. Hay algunos errores entre operadores binarios y números enteros, así como una división entre 0.
+\item ( ( -2 || -3 ) == ( ! 2 ) )\longrightarrow false
+\item ( ( 2 >= 3 ) - ( 2 >= 3 ) )\longrightarrow false
+\end{enumerate}
+
+\section{D\'{i}a del año}
+
+Si nos dan dos fechas de un mismo a\~no y nos indican en qu\'e d\'{i}a de la semana se supone que cae la primera fecha, ¿en qu\'e d\'ia de la semana deber\'{i}a caer la segunda fecha?
+
+\nocite{bm,asciiwiki,asciitab,isowiki,isotab1,isotab2,unicodewiki,unicodetab1,unicodetab2,unicodetab3,utfwiki,utftab1,utftab2}
+\bibliography{Citas} \bibliographystyle{alpha}
+
+\end{document}

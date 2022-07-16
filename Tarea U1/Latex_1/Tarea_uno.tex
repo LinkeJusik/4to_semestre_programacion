@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{Mart\'{\i}nez Gonz\'alez, Gabriel}
+\date{\today}
+\title{Tarea 1: CODIF}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+	El documento debe contener una breve descripci\'on de las codificaciones ASCII, ISO 8859, Unicode y UTF-8. Muestre una tabla con las diferentes codificaciones, cuyos valores se representen en decimal y hexadecimal, para los siguientes caracteres: a, b, c, A, B, C, \'a, \'e, \'{\i},\'o, \'u, \~n, ?`, !`.
+
+\end{abstract}
+
+\section{Breves descripciones de cada codificaci\'on}
+
+\subsection{ASCII}
+
+ASCII es un c\'odigo de caracteres basado en el alfabeto latino con el cual se escribe el ingl\'es actual. Fue creado como una evoluci\'on de los conjuntos de c\'odigos utilizados en la telegraf\'ia. El c\'odigo ASCII utiliza 7 bits para representar los caracteres.
+Es importante señalar que, por estas razones se podría decir que las letras acentuadas no pertenecen o no se pueden representar mediante ASCII, sin embargo, existe una codificación conocida como "ASCII extendido" en la que s\'{\i} entran estos caracteres (y la cu\'al se utilizar\'a en este trabajo para representar lo pedido en la tabla).
+
+\subsection{ISO-8859}
+
+ISO 8859-1 es una nortma de la ISO (Organizaci\'on Internacional de Normalizaci\'on) que define la codificaci\'on del alfabeto latino, necesarios para la escritura de algunas lenguas de Europa Occidental. Los caraceres de ISO 8859 utilizan 8 bits.
+
+\subsection{Unicode}
+
+Unicode es un estándar de codificación de caracteres diseñado para facilitar el tratamiento inform\'atico, transmisi\'on y visualizaci\'on de textos de numerosos idiomas y disciplinas t\'ecnicas, adem\'as de textos cl\'asicos de lenguas muertas. El t\'ermino Unicode proviene de los tres objetivos perseguidos: universalidad, uniformidad y unicidad.
+
+\subsection{UTF-8}
+
+UTF-8 es un formato de codificaci\'on de caracteres Unicode e ISO-10646 que utiliza s\'imbolos de longitud variable.
+
+\section{Tabla de caracteres en varias codificaciones}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|r|}
+
+\hline
+Char & ASCII d & ASCII h & ISO d & ISO h & Unicode d & Unicode h & UFT d & UFT h \\ \hline
+a & 97 & 61 & 97 & 61 & 97 & 61 & 97 & 61 \\ \hline
+b & 98 & 62 & 98 & 62 & 98 & 62 & 98 & 62 \\ \hline
+c & 99 & 63 & 99 & 63 & 99 & 63 & 99 & 63 \\ \hline
+A & 65 & 41 & 65 & 41 & 65 & 41 & 65 & 41 \\ \hline
+B & 66 & 42 & 66 & 42 & 66 & 42 & 66 & 42 \\ \hline
+C & 67 & 43 & 67 & 43 & 67 & 43 & 67 & 43 \\ \hline
+\'a & 160 & A0 & 225 & E1 & 225 & E1 & 225 & E1 \\ \hline
+\'e & 130 & 82 & 233 & E9 & 233 & E9 & 233 & E9 \\ \hline
+\'{\i} & 161 & A1 & 237 & ED & 237 & ED & 237 & ED \\ \hline
+\'o & 162 & A2 & 243 & F3 & 243 & F3 & 243 & F3 \\ \hline
+\'u & 163 & A3 & 250 & FA & 250 & FA & 250 & FA \\ \hline
+\~n & 164 & A4 & 241 & F1 & 241 & F1 & 241 & F1 \\ \hline
+?` & 168 & A8 & 191 & BF & 191 & BF & 191 & BF \\ \hline
+!` & 173 & AD & 161 & A1 & 161 & A1 & 161 & A1 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\nocite{bm,asciiwiki,asciitab,isowiki,isotab1,isotab2,unicodewiki,unicodetab1,unicodetab2,unicodetab3,utfwiki,utftab1,utftab2}
+\bibliography{Citas} \bibliographystyle{alpha}
+
+\end{document}
