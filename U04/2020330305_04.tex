@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{Mart\'{\i}nez Gonz\'alez, Gabriel}
+\date{\today}
+\title{Tarea 4: Acotaciones}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+
+	En el documento se resolveran los ejercicios concernientes al cuarto documento de tareas referente a las acotaciones de funciones.	
+	
+\end{abstract}
+
+Definición 1: Suponga que $f,g:N\longrightarrow R^{+}$ y que existen $n_0\in N$ y $C\in R^{+}$ tales que, $\forall n\geq \n_0$ se cumple $f(n)\leq Cg(n)$, entonces decimos que $f=O(g)$.
+
+\section{Parte 1:}
+
+Muestre que si $f,g:N\longrightarrow R^{+}$ y $$\lim\limits_{n\rightarrow\infty}{\frac{f(n)}{g(n)}}=k$$ para $k$ una contante real, entonces $f=O(g)$.\\
+
+Demostración:\\
+
+El hecho de que el límite se cumpla implica que, a partir de cierta $n\geq n_1, {|{\frac{f(n)}{g(n)}-k}|<\varepsilon_0}$, donde $\varepsilon_0$ está en función de $n$ y dado que $g(n)$ es una funci\'on positiva, se cumple que 
+$$|f(n)-kg(n)|<\varepsilon_0 g(n)$$ 
+Así pues, para $\varepsilon=\varepsilon_0 g(n)$ suficientemente pequeño; es decir, a partir de $n\geq n_0$, tenemos que:
+$$f(n)=k(g)$$
+Lo cual satisface la definición tal que $f=O(g)$.
+
+\section{Parte 2:}
+Para $f,g,f', g', h:\N\longrightarrow\R^{+}$, pruebe que:\\
+a) Si $g=O(f)$ y $h=O(f)$, entonces $g+h=O(f)$\\
+Prueba: $g=O(f)\Longrightarrow g(n)\leq C_1f(n)$ y $h=O(f)\Longrightarrow h(n)\leq C_2f(n)$; así pues $g(n)+h(n)\leq C_1f(n)+C_2f(n)=(C_1+C_2)f(n)$. Así pues, denotamos $C=C_1+C_2$ y así pues, tenemos que:
+$g(n)+h(n)\leq Cf(n)\Longrightarrow g+h=O(f)$, lo cual completa la prueba.\\
+
+b) Si $f=O(g)$ y $g=O(h)$, entonces $f=O(h)$\\
+Prueba: $f=O(g)\Longrightarrow f(n)\leq C_1g(n)$ y $g=O(h)\Longrightarrow g(n)\leq C_2h(n)$. Entonces 
+$f(n)\leq C_1g(n)\leq C_1(C_2h(n))=Ch(n)$, para $C=C_1C_2$. Entonces, tenemos que $f(n)\leq Ch(n)\Longrightarrow f=O(h)$. Esto completa la prueba. \\
+
+c) $f+g=O(max{f,g})$\\
+Prueba: Supongamos $max{f,g}=f$, entonces tenemos que $f(n)+g(n)\leq Cf(n)\Longrightarrow f+g=O(f)$. Dado que escogimos el m\'aximo de las funciones de forma arbitraria, la prueba es igual de valida para $max{f,g}=g$. Entonces, finalmente, tenemos que $f(n)+g(n)\leq Cmax{f(n), g(n)}\Longrightarrow f+g=O(max{f,g})$. Lo cual completa la prueba.\\
+
+d) $O(f+g)=O(max{f,g})$\\
+Prueba: Inmediata a partir del inciso c). Basta observar que $f(n)+g(n)\leq C_1max{f(n), g(n)}\Longrightarrow k(f(n)+g(n))\leq kC_1max{f(n), g(n)}\Longrightarrow O(f+g)=O(max{f,g})$, dado que $kC_1$ es una constante, para $k$ y $C_1$ constantes.\\
+
+e) Si $f=O(f')$ y $g=O(g')$, entonces $f+g=O(f'+g')$\\
+Prueba: Esta proposici\'on se puede demostrar usando el inciso c), si demostramos que $max{f,g}\leq k(f'+g')$. Esto es inmediato, dado que, por hipotesis $f\leq k_1f'$ y $g\leq k_2g'$, por lo que, sea cual sea el m\'aximo entre $f$ y $g$, $k(f'+g')$ es mayor o igual, definiendo $k=k_1k_2, k_1,k_2>1$. Esto completa la prueba.\\
+
+f) Si $f=O(f')$ y g=o(g'), entonces $fg=O(f'g')$\\
+Prueba: $f(n)\leq C_1f'(n), g(n)\leq C_2g'(n)\Longrightarrow f(n)g(n)=C_1C_2f'(n)g'(n)=Cf'(n)g'(n), C=C_1C_2\Longrightarrow fg=O(f'g')$. \\
+
+g) Si $f=O(g)$ y $a>0$, entonces $af=O(g)$\\
+Prueba: $f(n)\leq kg(n)\Longrightarrow af(n)\leq akg(n)=Cg(n), C=ak$. Esto completa la prueba.\\
+
+h) Si $f=O(g)$ y $n\geq 1$, entonces $f^{n}=O(g^{n})$\\
+Prueba (por inducción matemática):\\
+Para $n=1$ la prueba es inmediata. Para $n=2$: $f=O(g)\Longrightarrow f(n)\leq Cg(n)\Longrightarrow f^{2}(n)\leq C^2g^2(n)\Longrightarrow f^2=O(g^2)$.
+Así pues, podemos asumir que se cumple para $n$, tal que $$f^n=O(g^n)$$
+Finalmente, demostramos que se cumple para $n+1$: \\
+Por hipotesis de inducci\'on
+$$f^n=O(g^n)\Longrightarrow f^n\geq Cg^n \Longrightarrow f^{n+1}\leq C^2 g^{n+1}$$
+Esto completa la prueba.
+
+\section{Partes de la 3 a la 13}
+Para cada caso, indique la mejor estimación entre las siguientes:
+
+3. $f(n)=\binom{n}{3}$\\
+$\binom{n}{3}=\frac{n!}{3!(n-3)!}=\frac{n!}{6(n-3)!}$. 
+Sabemos que $6(n-3)!$ es un entero, por lo que $n!(6(n-3)!)\geq n!\Longrightarrow n! \geq \frac{n!}{6(n-3)!}$
+Por lo que la mejor aproximaci\'on es $f(n)=O(n!)$\\
+
+4. $f(n)=10 ln^3(n)+20n^2$\\
+Por los incisos c) de la sección 2:
+Tenemos que $ln^3(n)\leq n^2, \forall n$ y $n^2\leq n^2, \forall n$; por lo que la mejor aproximaci\'on es f(n)=O(n^2)\\
+
+5. El n\'umero de monomios en $x, y, z$ de grado total a lo m\'as $n$.\\
+La mejor aproximaci\'on es $f(n)=O(n^3)$\\
+
+
+6. El n\'umero de polinomios en $x$ de grado a lo m\'as $n$ cuyos coeficientes son 0 o 1.\\
+En este caso tenemos una colección de n coeficientes que pueden ser o bien 0, o 1. Para calcular el número total de estas listas, tendríamos que ver que el primer coeficiente tiene dos posibilidades (ser 0 o 1), el segundo tambi\'en (ser 0 o 1) y as\'{i} susesivamente hasta el coeficiente de grado $n$, donde sólo existe una posibilidad (pues de ser 0, el polinomio sería de grado n-1). Así pues, tenemos que la cantidad de polinomios se puede poner de la forma:
+$$2\cdot2\cdot...\cdot2-1$$
+
+Donde el $-1$ sirve para quitar el caso donde el coeficiente de grado $n$ es 0. Vemos pues que:
+$$f(n)=2^{n}-1<2^n, \forall n\in\N$$
+
+Por lo que la mejor aproximación es $f(n)=O(2^n)$\\
+
+7. El n\'umero de polinomios en $x$ de grado a lo m\'as $n-1$ cuyos coeficientes son enteros entre 0 o n.\\
+Usando un m\'etodo parecido al del inciso anterior, se puede hacer:
+$$n\cdot n\cdot...\cdot n-1$$
+
+Donde, nuevamente, se multiplican $n-1$ veces $n$ y se resta uno para quitar el caso en que el coeficiente de grado $n-1$ sea 0. Así pues, tenemos 
+$$f(n)=n^{n-1}-1<n^{n-1}<n^n$$
+
+Por lo que la mejor aproximaci\'on es $f(n)=O(n^n)$\\
+
+8. Dado $k\in\{0,1,2,n-1\}$, la suma $\sum_{i=1}^{n}{i^k}$.\\
+Nuevamente, tenemos que a lo mucho, esta suma ser\'a de la forma:
+$$f(n)=\sum_{i=1}^{n}{i^{n-1}}=1^{n-1}+2^{n-1}+3^{n-1}+...+n^{n-1}<n^{n-1}+n^{n-1}+n^{n-1}+...+n^{n-1}=n(n^{n-1})=n^n$$
+Por lo que la mejor aproximaci\'on es $f(n)=O(n^n)$\\
+
+9. La cantidad de espacio de memoria que una computadora requiere para almacenar un n\'umero $n$.\\
+La mejor aproximaci\'on es $f(n)=O(ln(n))$\\
+
+
+10. La cantidad de espacio de memoria que una computadora requiere para almacenar $n^2$.\\
+La mejor aproximaci\'on es $f(n)=O(ln^2(n))$\\
+
+11. La suma de los primeros $n$ enteros positivos.\\
+Consideremos que la suma de los primeros n enteros está dada por:
+$$f(n)=\frac{n(n+1)}{2}=\frac{n^2+n}{2}\leq n^2$$
+Lo \'ultimo se puede ver porque:
+$$2n^2\geq n^2+n\Longrightarrow n^2\geq \frac{n^2+n}{2}$$
+Por lo que la mejor aproximaci\'on es $f(n)=O(n^2)$\\
+
+12. La suma de los cuadrados de los primeros $n$ enteros positivos.\\
+$$f(n)=\frac{n(n+1)(2n+1)}{6}=\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}$$
+
+Así pues, vemos que cada uno de los sumando est\'a acotado por $n^3$. Así pues, la mejor aproximaci\'on es $f(n)=O(n^3)$\\
+
+13. El n\'umero de bits en la suma de los cuadrados de los primeros $n$ enteros positivos.\\
+La mejor aproximaci\'on es $f(n)=O(ln^3(n))$\\
+
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\author{Mart\'{\i}nez Gonz\'alez, Gabriel}
+\date{\today}
+\title{Tarea 6: M\'etodos de busqueda y ordenamiento}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	En el documento se explicar\'an los m\'etodos de b\'usqueda y ordenamiento solicitados para la sexta tarea.
+\end{abstract}
+
+\section{M\'etodos de b\'usqueda}
+
+\subsection{Lineal}
+	
+La b\'usqueda secuencial (o lineal) busca un elementro de una lista o arreglo de elementos utilizando un valor destino llamado clave. En una b\'usqueda secuencial los elementos de una lista se exploran en secuencia, uno desp\'ues de otro. El algoritmo de b\'usqueda lineal compara cada elemento del arreglo con la clave de b\'usqueda.
+
+\subsection{Binaria}
+
+Si la lista en la que se buscar\'a el elemento est\'a ordenada, un m\'etodo m\'as eficiente que la busqueda lineal es la b\'usqueda binaria. Se sit\'ua la lectura en el centro de la lista y se comprueba si nuestra clave coincide con el valor del elemento central. Si no se encuentra el valor clave, se sit\'ua uno en la mitad inferior o superior del elementro central de la lista. En general, si los datos de la lista est\'an ordenados se puede utilizar esa informaci\'on para acortar el tiempo de b\'usqueda.
+
+\subsection{M\'etodo Hash}
+
+Usando estructuras de datos de diferentes tipos permite optimizar la b\'usqueda de informaci\'on en un arreglo. La b\'usqueda en tablas Hash es una implementación de las estructuras de datos en la b\'usqueda de informaci\'on.
+Una tabla Hash es una estructura de datos de acceso pseudo-aleatorio que asigna un lugar a la informaci\'on en la tabla a partir de \'{i}ndices generados gracias a la informaci\'on de cada elemento. La funci\'on Hash es la que g\'enera dichos \'{i}ndices y debe de ser fac\'{i}l de calcular, adem\'as que debe distribuir uniformemente las claves de acceso a la tabla, tal que evite la asignar dos elementos a la misma direcci\'on de memor\'{i}a. En caso de que no sea posible asignar a dos elementos distintos un \'{i}ndice diferente, entonces debe existir alg\'un m\'etodo que genere posiciones alternativas.
+La funci\'on de la b\'usqueda con tablas de Hash es contruir una estructura de datos que ordene informaci\'on aleatoria a partir de elementos representativos que las haga m\'as f\'aciles de distinguir.
+
+\section{M\'etodos de ordenamiento}
+
+\subsection{Intercambio directo}
+
+El que, probablemente, sera el algoritmo de ordenaci\'on m\'as sencillo es el de intercambio. Este ordena los elementos de una lista en orden ascendente. El algorimo se basa en la lectura sucesiva de la lista a ordenar, comparando el elemento inferior de la lista con los restantes y efectuando intercambio de posiciones cuando el orden resultante de la comparaci\'on no sea el correcto.
+
+\subsection{Selecci\'on directa}
+
+El algoritmo de selecci\'on se describe de la siguiente forma: consid\'erese el algoritmo para ordena un arreglo A de n enteros en orden ascente. El problema se trata de reordenar los valores del arreglo de modo que el dato contenido en el indice 0 (A[0]) sea el valor m\'as peque\~no, el valor en el indice 1 el siguiente m\'as pequeño y as\'{i} susesivamente hasta que el elemento en A[n-1] sea el elemento m\'as grande del arreglo. 
+El algoritmo se apoya en sucesivas pasada que intercambian el elemento m\'as peque\~no sucesivamente con el primer elemento de la lista A[0]. As\'{i}, se busca el elemento m\'as peque\~no de la lista y se intercambia con A[0], primer elemento de la lista. Despu\'es de terminar esta primera pasada, el frente de la lista est\'a ordenado y el resto de la lista A[1], A[2], ..., A[n-1] permanece desordenada. La siguiente pasada busca en esta lista desordenada y selecciona el elemento m\'as peque\~no, que se almacena entonces en la posici\'on A[1]. Este proceso continua n-1 pasadas, tal que en ese momento la lista desordenada se reduce a un elemento; es decir, la lista ha quedado completamente ordenada.
+
+\subsection{Inserci\'on directa}
+
+El algoritmo de ordenamiento por inseci\'on de una arreglo A de n elementos se reduce a la siguiente lista de pasos:
+\begin{itemize}
+\item {El primer elemento A[0] se considera ordenado; es decir, la lista inicial consta de un solo elemento.}
+\item {Se inserta A[1] en la posici\'on correcta; es decir, adelante o atr\'as A[0], depenediendo de que sea menor o mayor. Es decir, se explora la lista desde A[i] hasta A[n] buscando la posici\'oncorrecta de destino; esto es, la posici\'on a insertar dentro de la lista ordenada.}
+\item {Por cada bucle o iteraci\'on se mueve hacia abajo (a la derecha en la lista) una posici\'on todos los elementos mayores que la posici\'on a insertar, para dejar vac\'{i}a esa posici\'on.} 
+\item {Insertar el elemento en la posici\'on correcta.}
+\end{itemize}
+
+\subsection{Shellsort}
+
+Es una mejora al algoritmo de inserci\'on directa y burbuja, en el que se comparan elementos que pueden ser no contiguos. La idea general de algoritmo es:
+Se divide la lista original (de n elementos) en n/2 grupos de dos elementos, con un intervalo entre los elementos de cada grupo n/2 y se clasifica cada grupo por separado (se comparan las parejas de elementos y si no están ordenados se intercambian entre s\'{i} de posiciones). Se divide ahora la lista en n/4 grupos de cuatro con un intervalo o salto de n/4 y, de nuevo, se clasifica cada grupo por separado. Se repite el proceso hasta que, en el \'ultimo paso, se clasifica el grupo de n elementos. En el \'ultimo paso el m\'etodo Shell coincide con el m\'etodo de la burbuja.
+
+\subsection{Heapsort}
+
+Para analizar este m\'etodo hay que tener en cuenta que un arreglo se puede utilizar para efectuar la implementaci\'on de un \'arbol de la siguiente forma:
+En la primera posici\'on del arreglo se amacenar\'a la ra\'{i}z del \'arbol; los hijos del nodo situado en la posici\'on i sel arreglo (A[i]) est\'an colocados en las posiciones 2*i y 2*i+1. Un mont\'{i}culo en m\'{i}nimo (en m\'aximo) es una agrupaci\'on en forma piramidal de elementos en la que para cualquier nivel el peso de estos es menor o igual (mayor o igual) que la de los elementos adjuntos del nivel inferior, y por consiguiente, en la parte m\'as alta se encuentra el elemento m\'as pequeño (m\'as grande). Un mont\'{i}culo binario en m\'{i}nimo de tama\~no n, se define como un \'arbol binario casi completo de n nodos, tal que el contenido de cada nodo es menor o igual que el contenido de sus hijos.
+Usando la estrucutra de mont\'on m\'aximo se contruye el mont\'on m\'aximo considerando que los nodos del mont\'{i}culo del \'ultimo nivel del \'arbol son cada uno un submont\'{i}culo de un nodo. Subiendo un nivel en el \'arbol, se considera cada nodo como la ra\'{i}z de un \'arbol que cumple la condici\'on de mont\'{i}culo, excepto quiz\'as en la ra\'{i}z (su rama izquierda y derecha cumplen la condici\'on ya que se est\'a construyendo de abajo hac\'{i}a arriba), entonces al aplicar la funci\'on hundir (reconstruye el mont\'{i}culo hundiendo la ra\'{i}z) se asegura un nuevo submont\'{i}culo que cumple la condici\'on de ordenaci\'on. El algoritmo va subiendo de nivel en nivel, construyendo tantos submont\'{i}culos como nodos tiene el nivel, hasta llegar al primer nivel en el que s\'olo hay un nodo que es la ra\'{i}z del mont\'{i}culo completo.
+Una vez construido el mont\'{i}culo se quita la ra\'{i}z, llev\'andola a la \'ultima posici\'on del arreglo, ya que es el elemento mayor, y se coloca el elemento que estaba al final como ra\'{i}z. Se rehace el mont\'{i}culo sin considerar el \'ultimo elemento y se repite el proceso con un subarreglo que no tiene el \'ultimo elemento. El proceso termina cuando el subarreglo a tratar conste de un \'unico elemento. 
+
+\subsection{Quicksort}
+
+El m\'etodo consiste en dividir el arreglo en dos particiones, una con todos los elementos menores a un cierto valor especifico y otra con todos los mayores a ese valor. Dicho valor recibe la denominaci\'on de pivote. Posteriormente se ordena los pequeños y despu\'es los mayores. Si el arreglo no tiene datos entonces ya está ordenado.
+
+\subsection{Mergesort}
+
+Este m\'etodo de ordenaci\'on consiste en dividir el vector por su posici\'on central en dos partes. Ordenar la parte izquierda, ordenar la parte derecha y despu\'es realizar la mezcla ordenada de ambas partes. Si el arreglo no tiene datos, ya está ordenado.
+
+\end{document}
